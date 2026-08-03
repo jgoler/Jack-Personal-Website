@@ -1,142 +1,331 @@
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+/* ============================================================
+   Jack Goler — personal site
+   Tokens first, then layout. Everything responsive down to 320px.
+   ============================================================ */
+
+:root {
+  --bg:        #fdfdfc;
+  --ink:       #16181d;
+  --muted:     #5d6570;
+  --rule:      #e4e6ea;
+  --chip-bg:   #eef1f4;
+  --accent:    #0f5c93;
+  --accent-2:  #b45309;
+
+  --serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif;
+  --mono:  'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --measure: 820px;
+  --gap: 2.75rem;
 }
 
-a {
-  color: #1772d0;
-  text-decoration: none;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:       #101215;
+    --ink:      #e7eaee;
+    --muted:    #98a1ac;
+    --rule:     #262a31;
+    --chip-bg:  #1c2027;
+    --accent:   #6fb4e8;
+    --accent-2: #e0a45c;
+  }
 }
 
-a:focus,
-a:hover {
-  color: #f09228;
-  text-decoration: none;
-}
+*, *::before, *::after { box-sizing: border-box; }
 
-body,
-td,
-th,
-tr,
-p,
-a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-}
+html { -webkit-text-size-adjust: 100%; }
 
-strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-}
-
-h2 {
+body {
   margin: 0;
-  font-weight: normal;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  /* Long tokens (URLs, hyphenated paper titles) shouldn't push the layout wide on narrow phones. */
+  overflow-wrap: break-word;
 }
 
-.papertitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
+p { margin: 0 0 1em; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color .15s ease, border-color .15s ease;
+}
+a:hover { color: var(--accent-2); border-bottom-color: currentColor; }
+a:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+.skip-link:focus {
+  left: 1rem; top: 1rem;
+  z-index: 10;
+  padding: .5rem .75rem;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+}
+
+.wrap {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: clamp(2rem, 6vw, 4.5rem) clamp(1.15rem, 5vw, 2rem) 3rem;
+}
+
+/* ---------------- Header ---------------- */
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  /* Centred, not top-aligned: the bio column is much taller than the photo, so
+     `start` pinned the photo to the top and left a dead corner under it. */
+  align-items: center;
+}
+
+/* Photo is first in the DOM (so it leads on mobile) but belongs in the narrow
+   right-hand column on desktop — without this it takes the 1fr column and
+   squeezes the bio into 190px. The mobile block reorders it back to the top. */
+.intro__photo { order: 2; }
+
+.intro__photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
 }
 
 .name {
-  padding-top: 20px;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(2.1rem, 6vw, 2.9rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin: 0 0 .85rem;
+}
+
+/* Application-cycle note: visible without shouting, since it's only relevant
+   for one season. Delete the <p> once the cycle is over. */
+.intro__note {
+  margin: 1.2rem 0 0;
+  padding-left: .8rem;
+  border-left: 2px solid var(--accent);
+  color: var(--muted);
+  font-size: .93rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem 1.15rem;
+  margin-top: 1.35rem;
+  font-family: var(--mono);
+  font-size: .8rem;
+  letter-spacing: .01em;
+}
+
+/* ---------------- Sections ---------------- */
+
+.section {
+  margin-top: var(--gap);
+  padding-top: var(--gap);
+  border-top: 1px solid var(--rule);
+}
+
+.section h2 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+  margin: 0 0 1.1rem;
+}
+
+.section__lede {
+  color: var(--muted);
+  margin-top: -.5rem;
+}
+
+/* ---------------- Publications ---------------- */
+
+.pub {
+  display: grid;
+  grid-template-columns: 236px 1fr;
+  gap: 1.6rem;
+  align-items: start;
+}
+
+.pub + .pub {
+  margin-top: 2.25rem;
+  padding-top: 2.25rem;
+  border-top: 1px solid var(--rule);
+}
+
+.pub__media {
+  display: block;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--chip-bg);
+  line-height: 0;
+}
+.pub__media:hover { border-color: var(--accent); }
+
+.pub__media video,
+.pub__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pub__title {
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0 0 .35rem;
+}
+.pub__title a { color: var(--ink); }
+.pub__title a:hover { color: var(--accent-2); }
+
+.pub__authors { margin: 0 0 .45rem; }
+.pub__authors strong { font-weight: 600; }
+
+.pub__venue {
+  margin: 0 0 .6rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .6rem;
+}
+
+.chip {
+  font-family: var(--mono);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .18rem .5rem;
+  background: var(--chip-bg);
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.pub__note { color: var(--muted); font-size: .85rem; }
+
+.pub__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem .9rem;
+  margin: 0 0 .7rem;
+  font-family: var(--mono);
+  font-size: .8rem;
+}
+
+.pub__abstract {
+  color: var(--muted);
+  font-size: .93rem;
   margin: 0;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
 }
 
-.one {
-  width: 160px;
-  height: 160px;
+/* ---------------- Video embeds ---------------- */
+
+/* Two-up on desktop, one-up on phones, without needing a breakpoint.
+   auto-FILL, not auto-fit: a section holding a single video keeps it at one
+   column width instead of stretching it across the full measure. */
+.videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.6rem;
+}
+
+.video { margin: 0; }
+
+.embed {
   position: relative;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #000;
 }
-
-.two {
-  width: 160px;
-  height: 160px;
+.embed iframe {
   position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
-.fade {
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+.video figcaption {
+  margin-top: .6rem;
+  font-family: var(--mono);
+  font-size: .78rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
-span.highlight {
-  background-color: #ffffd0;
+/* ---------------- Footer ---------------- */
+
+.foot {
+  margin-top: var(--gap);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: .84rem;
+}
+.foot p { margin: 0; }
+
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 640px) {
+  /* Tighter vertical rhythm — 2.75rem rules read as gaps on a phone screen. */
+  :root { --gap: 2.25rem; }
+
+  .intro {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  .intro__photo { order: -1; width: 148px; }
+  .intro__text { width: 100%; }
+  /* Centred name, but ragged-right body copy: centred multi-line paragraphs
+     are hard to track back to the start of the next line. */
+  .intro__text p { text-align: left; }
+  .links { justify-content: center; margin-top: .9rem; }
+
+  .pub { grid-template-columns: 1fr; gap: 1rem; }
+  /* Flush with the text column on phones, still restrained on large handsets. */
+  .pub__media { max-width: min(100%, 420px); }
+
+  /* Touch targets: 22px-tall text links are too small and too close together.
+     Pad to the ~44px minimum without changing the type size. */
+  .links a,
+  .pub__links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  .links { gap: 0 1.35rem; }
+  .pub__links { gap: 0 1.1rem; margin-bottom: .3rem; }
+
+  .section h2 { margin-bottom: .9rem; }
 }
 
-.colored-box {
-    color: black;
-    padding: 20px;
-    display: inline-block;
-    border-radius: 10px;
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    transition-duration: .001ms !important;
+  }
 }

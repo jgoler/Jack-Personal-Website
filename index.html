@@ -1,84 +1,224 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jack Goler</title>
+  <title>Jack Goler</title>
+  <meta name="author" content="Jack Goler">
+  <meta name="description" content="Jack Goler is an undergraduate researcher at Stanford University's Robotic and Embodied AI Lab (REALab), working on robot learning and manipulation.">
 
-    <meta name="author" content="Jack Goler">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
-  </head>
+  <!-- Link previews (Twitter/X, Slack, iMessage, LinkedIn). Update the URL if you move off github.io. -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Jack Goler">
+  <meta property="og:description" content="Undergraduate researcher at Stanford's Robotic and Embodied AI Lab (REALab), working on robot learning and manipulation.">
+  <meta property="og:url" content="https://jgoler.github.io/Jack-Personal-Website/">
+  <meta property="og:image" content="https://jgoler.github.io/Jack-Personal-Website/images/profile_picture.jpg">
+  <meta name="twitter:card" content="summary">
 
-  <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Jack Goler
-                </p>
-                <p>I'm an undergraduate researcher at <a href="https://real.stanford.edu/">Stanford University's Robotic and Embodied AI Lab (REALab)</a> where I research aquatic robots. 
-                </p>
-                <p>
-                  At Stanford, I am studying math and EE/CS. Prior to joining REALab, I conducted research at  <a href="https://navlab.stanford.edu/">Stanford's Navigation and Autonomous Vehicles Lab</a> where I investigated environmental mapping to create photorealistic digital twins of environments using NeRFs and Gaussian Splats trained on drone imagery. 
-                </p>
-                <p style="text-align:center">
-                  <a href="mailto:jgoler@stanford.edu">Email</a> &nbsp;/&nbsp;
-                  <a href="data/Jack-Goler-CV.pdf">CV</a> &nbsp;/&nbsp;
-                  <a href="data/JackGoler-bio.txt">Bio</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/jgoler">Github</a>
-                </p>
-              </td>
-              <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="images/profile_picture.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/profile_picture.jpg" class="hoverZoomLink"></a>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Quarter Recaps</h2>
-                <p style="text-align:center;">
-                  <strong>Spring 2025 Recap</strong>
-                  <br><br>
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/P_5iu6ukFC4" title="Spring 2025 Recap" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
-                <p>
-                  I'm largely interested in robotics, particularly in developing autonomous systems. I also have interests in graphics and systems engineering.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-          
-          
-					
-           
-      
+  <!-- Tints the mobile browser chrome to match the page background. -->
+  <meta name="theme-color" content="#fdfdfc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101215" media="(prefers-color-scheme: dark)">
 
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0px">
-                <br>
-                <p style="text-align:center;font-size:small;">
-                   <a href="https://github.com/jonbarron/jonbarron_website">Website template from Jon Barron.</a>
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-        </td>
-      </tr>
-    </table>
-  </body>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="wrap">
+
+  <!-- ================= HEADER ================= -->
+  <header class="intro">
+    <div class="intro__photo">
+      <img src="images/profile_picture.jpg" width="640" height="640" alt="Jack Goler">
+    </div>
+
+    <div class="intro__text">
+      <h1 class="name">Jack Goler</h1>
+
+      <!-- TODO(Jack): this blurb still says "aquatic robots" only. Widen it if your
+           day-to-day is now cross-embodiment manipulation rather than underwater work. -->
+      <p>
+        I'm an undergraduate researcher at
+        <a href="https://real.stanford.edu/">Stanford University's Robotic and Embodied AI Lab (REALab)</a>,
+        advised by <a href="https://shurans.github.io/">Shuran Song</a>. I work on robot learning for
+        manipulation &mdash; most recently on underwater manipulation that avoids underwater teleoperation.
+      </p>
+      <p>
+        At Stanford I study mathematics and EE/CS. Before REALab I was at
+        <a href="https://navlab.stanford.edu/">Stanford's Navigation and Autonomous Vehicles Lab</a>,
+        where I worked on photorealistic digital twins of environments using NeRFs and Gaussian splats
+        trained on drone imagery.
+      </p>
+
+      <p class="intro__note">
+        I'm applying to PhD programs this fall, for Fall 2027 admission.
+      </p>
+
+      <nav class="links" aria-label="Profile links">
+        <a href="mailto:jgoler@stanford.edu">Email</a>
+        <a href="data/Jack-Goler-CV.pdf">CV</a>
+        <a href="https://scholar.google.com/citations?user=MttHoGcAAAAJ">Google Scholar</a>
+        <a href="https://github.com/jgoler">GitHub</a>
+        <!-- <a href="https://www.linkedin.com/in/YOUR_HANDLE">LinkedIn</a> -->
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= RESEARCH ================= -->
+    <section class="section">
+      <h2>Research</h2>
+      <p>
+        I'm interested in how robots acquire manipulation skills from data that is cheap to collect &mdash;
+        human demonstrations, handheld grippers, and self-supervised interaction &mdash; and in how those
+        skills transfer across embodiments and environments. I also have interests in graphics and systems
+        engineering.
+      </p>
+    </section>
+
+    <!-- ================= PUBLICATIONS ================= -->
+    <section class="section">
+      <h2>Publications</h2>
+
+      <article class="pub">
+        <a class="pub__media" href="https://umi-under-water.github.io/" aria-label="UMI-Underwater project page">
+          <!-- Hotlinked from the project page so this works immediately. For a self-contained
+               site, download the file and swap the src to images/umi_underwater_teaser.mp4 -->
+          <video src="https://umi-under-water.github.io/static/videos/teaser-small.mp4"
+                 autoplay loop muted playsinline preload="metadata"
+                 aria-label="UMI-Underwater teaser video"></video>
+        </a>
+
+        <div class="pub__body">
+          <h3 class="pub__title">
+            <a href="https://umi-under-water.github.io/">UMI-Underwater: Learning Underwater Manipulation without Underwater Teleoperation</a>
+          </h3>
+          <p class="pub__authors">
+            Hao Li*, Long Yin Chung*, <strong>Jack Goler</strong>, Ryan Zhang, Xiaochi Xie,
+            <a href="https://huy-ha.github.io/">Huy Ha</a>,
+            <a href="https://shurans.github.io/">Shuran Song</a>,
+            <a href="https://profiles.stanford.edu/mark-cutkosky">Mark Cutkosky</a>
+          </p>
+          <p class="pub__venue"><span class="chip">RSS 2026</span> <span class="pub__note">*equal contribution</span></p>
+          <p class="pub__links">
+            <a href="https://umi-under-water.github.io/">Project page</a>
+            <a href="https://umi-under-water.github.io/static/pdfs/UMI_Underwater.pdf">Paper</a>
+            <a href="https://arxiv.org/abs/2603.27012">arXiv</a>
+            <a href="https://youtu.be/yC62ZlewLsI">Video</a>
+            <a href="https://github.com/umi-under-water/UMI_underwater">Code</a>
+          </p>
+          <p class="pub__abstract">
+            Underwater manipulation is bottlenecked by the cost of teleoperated data collection and by how
+            badly RGB policies degrade in water. We pair an autonomous, self-supervised underwater data
+            collector with a depth-based affordance representation trained on on-land handheld
+            demonstrations, which transfers underwater zero-shot. Deployed in the pool and in the ocean at
+            Stanford's Hopkins Marine Station.
+          </p>
+        </div>
+      </article>
+
+      <!-- ============================================================
+           TEMPLATE for your next entry (e.g. the cross-gripper transfer
+           paper). Uncomment, fill in, and drop it ABOVE the block above
+           so publications stay reverse-chronological.
+
+      <article class="pub">
+        <div class="pub__media">
+          <img src="images/PAPER_teaser.jpg" alt="">
+        </div>
+        <div class="pub__body">
+          <h3 class="pub__title"><a href="PROJECT_PAGE_URL">Paper title</a></h3>
+          <p class="pub__authors"><strong>Jack Goler</strong>, Coauthor, Coauthor</p>
+          <p class="pub__venue"><span class="chip">Under review</span></p>
+          <p class="pub__links">
+            <a href="#">Paper</a>
+            <a href="#">Code</a>
+          </p>
+          <p class="pub__abstract">One or two sentences on the contribution.</p>
+        </div>
+      </article>
+      ============================================================ -->
+    </section>
+
+    <!-- ================= EXPLAINERS ================= -->
+    <section class="section">
+      <h2>Explainers</h2>
+      <p class="section__lede">
+        Short videos where I rebuild an idea from scratch &mdash; the surest way I know
+        to find the gaps in what I think I understand.
+      </p>
+
+      <!-- Newest first. The grid fills left-to-right and reflows to one column
+           on narrow screens, so a new explainer is just another <figure>. -->
+      <div class="videos">
+        <figure class="video">
+          <div class="embed">
+            <iframe src="https://www.youtube-nocookie.com/embed/PNyZj_BDZMY"
+                    title="Bigram Language Modeling"
+                    loading="lazy" frameborder="0"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+          </div>
+          <figcaption>Bigram Language Modeling</figcaption>
+        </figure>
+
+        <!-- TEMPLATE for the next explainer — copy, fill in, place above.
+        <figure class="video">
+          <div class="embed">
+            <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
+                    title="Video title"
+                    loading="lazy" frameborder="0"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+          </div>
+          <figcaption>Video title</figcaption>
+        </figure>
+        -->
+      </div>
+    </section>
+
+    <!-- ================= COURSE RECAPS ================= -->
+    <section class="section">
+      <h2>Course Recaps</h2>
+      <p class="section__lede">What I worked on each quarter at Stanford.</p>
+
+      <div class="videos">
+        <figure class="video">
+          <div class="embed">
+            <iframe src="https://www.youtube-nocookie.com/embed/P_5iu6ukFC4"
+                    title="Spring 2025 Recap"
+                    loading="lazy" frameborder="0"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+          </div>
+          <figcaption>Spring 2025 Recap</figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <p>Last updated August 2026</p>
+  </footer>
+</div>
+
+<script>
+  // Respect reduced-motion: stop the looping teaser for people who ask for less motion.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('video[autoplay]').forEach(function (v) {
+      v.removeAttribute('autoplay');
+      v.setAttribute('controls', '');
+      v.pause();
+    });
+  }
+</script>
+</body>
 </html>
