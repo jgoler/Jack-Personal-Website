@@ -4,6 +4,8 @@
    ============================================================ */
 
 :root {
+  color-scheme: light;
+
   --bg:        #fdfdfc;
   --ink:       #16181d;
   --muted:     #5d6570;
@@ -20,8 +22,26 @@
   --gap: 2.75rem;
 }
 
+/* Dark palette, applied when the toggle (or the inline head script) sets
+   data-theme="dark". */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg:       #101215;
+  --ink:      #e7eaee;
+  --muted:    #98a1ac;
+  --rule:     #262a31;
+  --chip-bg:  #1c2027;
+  --accent:   #6fb4e8;
+  --accent-2: #e0a45c;
+}
+
+/* Same palette for visitors with JS off — no data-theme is ever set for them,
+   so fall back to honouring the OS preference the way the site used to. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+
     --bg:       #101215;
     --ink:      #e7eaee;
     --muted:    #98a1ac;
@@ -46,6 +66,7 @@ body {
   -webkit-font-smoothing: antialiased;
   /* Long tokens (URLs, hyphenated paper titles) shouldn't push the layout wide on narrow phones. */
   overflow-wrap: break-word;
+  transition: background-color .25s ease, color .25s ease;
 }
 
 p { margin: 0 0 1em; }
@@ -79,6 +100,57 @@ a:focus-visible {
   max-width: var(--measure);
   margin: 0 auto;
   padding: clamp(2rem, 6vw, 4.5rem) clamp(1.15rem, 5vw, 2rem) 3rem;
+}
+
+/* ---------------- Theme toggle ---------------- */
+
+/* Sits in the flow above the header rather than floating, so it can't collide
+   with the photo on narrow screens. The negative margin borrows space from the
+   generous top padding on .wrap. */
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  margin: -0.75rem 0 1.5rem;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: .3rem .7rem;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: .75rem;
+  letter-spacing: .04em;
+  cursor: pointer;
+  transition: color .15s ease, border-color .15s ease, background-color .15s ease;
+}
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 3px;
+}
+
+.theme-toggle__face {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+}
+
+/* Show the face for the theme you'd switch *to*. */
+:root[data-theme="dark"] .theme-toggle__face--to-dark,
+:root:not([data-theme="dark"]) .theme-toggle__face--to-light { display: none; }
+
+/* JS off: no data-theme is set, so mirror the OS preference here too. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .theme-toggle__face--to-dark { display: none; }
+  :root:not([data-theme]) .theme-toggle__face--to-light { display: inline-flex; }
 }
 
 /* ---------------- Header ---------------- */
@@ -321,6 +393,10 @@ a:focus-visible {
   .pub__links { gap: 0 1.1rem; margin-bottom: .3rem; }
 
   .section h2 { margin-bottom: .9rem; }
+
+  /* Same 44px touch-target floor as the text links. */
+  .theme-toggle { min-height: 44px; padding: .3rem .95rem; }
+  .topbar { margin: -0.4rem 0 1rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
